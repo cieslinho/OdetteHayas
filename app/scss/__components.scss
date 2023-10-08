@@ -5,17 +5,46 @@
 	max-width: 1600px;
 }
 
-// .section-title {
-// 	margin-bottom: 0.5em;
-// 	font-size: 4.5rem;
-// 	font-family: 'Dancing Script', cursive;
-// 	text-align: center;
+.section-subtitle {
+	margin-bottom: 0.1em;
+	color: $purple;
+	font-size: 2rem;
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
 
-// 	@include respond(tablet) {
-// 		font-size: 6rem;
-// 	}
+	@include respond(desktop-small) {
+		font-size: 2.5rem;
+	}
+}
 
-// 	@include respond(desktop-small) {
-// 		font-size: 8rem;
-// 	}
-// }
+.section-title {
+	position: relative;
+	margin-bottom: 0.5em;
+	color: $black;
+	font-weight: 700;
+	font-size: 4.5rem;
+	text-align: center;
+	text-transform: uppercase;
+
+	@include respond(desktop-small) {
+		font-size: 6.5rem;
+	}
+
+	&::after {
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		background-color: $black;
+		width: 60px;
+		height: 3px;
+		content: '';
+	}
+}
+
+.section-white {
+	background-color: $white;
+}
+
+.section-black {
+	background-color: $black;
+}

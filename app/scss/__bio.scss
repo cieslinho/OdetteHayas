@@ -1,0 +1,82 @@
+.bio {
+	@include section-padding;
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 2em;
+
+		@include respond(desktop-small) {
+			flex-direction: row;
+			align-items: center;
+			gap: 4em;
+		}
+		// align-items: center;
+		// position: relative;
+	}
+
+	&__box {
+		&-img {
+			width: 100%;
+
+			@include respond(tablet) {
+				width: 40%;
+			}
+		}
+
+		&-infos {
+			width: 100%;
+
+			@include respond(desktop-small) {
+				width: 60%;
+			}
+		}
+
+		&-names {
+			h2,
+			h3 {
+				text-align: left;
+			}
+		}
+
+		&-text {
+			margin-block: 0.5em;
+			color: $black;
+			// font-family: 'Montserrat', sans-serif;
+			font-size: 1.6rem;
+			line-height: 150%;
+			text-align: left;
+
+			@include respond(tablet) {
+				font-size: 1.8rem;
+			}
+		}
+
+		&-socials {
+			h2 {
+				text-align: left;
+			}
+		}
+
+		&-social {
+			transition: color 0.2s;
+			margin-inline: 0.1em;
+			padding: 0.2em;
+			color: $black;
+			font-size: 3rem;
+			// text-align: center;
+
+			&:hover {
+				color: $purple;
+			}
+		}
+	}
+
+	&__img {
+		box-shadow: 0 0 15px $purple;
+		border: 1px solid $purple;
+		border-radius: 8px;
+		width: 100%;
+	}
+}

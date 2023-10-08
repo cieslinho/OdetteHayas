@@ -4,10 +4,28 @@
 	top: 0;
 	left: 0;
 	z-index: 99999;
+	box-shadow: 0 5px 35px $purple;
+	// border-bottom: 1px solid $purple;
+	background-color: $black;
 	width: 100%;
 
+	@include respond(tablet) {
+		align-items: center;
+		// background-color: transparent;
+		padding: 1em 0.5em;
+	}
+
 	&__logo {
-		color: $white;
+		color: $black;
+		font-weight: 700;
+
+		@include respond(tablet) {
+			color: $white;
+		}
+	}
+
+	&__img {
+		width: 160px;
 	}
 
 	&__navbar {
@@ -16,13 +34,31 @@
 		align-items: center;
 		padding: 1em 0.5em;
 		width: 100%;
+
+		@include respond(tablet) {
+			padding: 0;
+			width: initial;
+		}
 	}
 
 	&__btn {
+		z-index: 9999;
 		cursor: pointer;
+		outline: none;
 		border: none;
-		background-color: transparent;
-		padding: 0.3em;
+		background-color: $black;
+		padding: 0.5em;
+
+		@include respond(tablet) {
+			display: none;
+		}
+
+		&:hover &-bars,
+		&:hover &-bars::after,
+		&:hover &-bars::before {
+			background-color: $purple;
+			width: 100%;
+		}
 
 		&-box {
 			position: relative;
@@ -34,6 +70,7 @@
 			position: absolute;
 			top: 0;
 			right: 0;
+			transition: width 0.3s, background-color 0.3s;
 			background-color: $white;
 			width: 100%;
 			height: 2px;
@@ -43,6 +80,7 @@
 			&::before {
 				position: absolute;
 				right: 0;
+				transition: width 0.3s, background-color 0.3s;
 				background-color: $white;
 				width: 100%;
 				height: 2px;
@@ -61,6 +99,21 @@
 		}
 	}
 
+	&__btn.active {
+		.nav__btn-bars,
+		.nav__btn-bars::after,
+		.nav__btn-bars::before {
+			background-color: $purple;
+			width: 100%;
+		}
+	}
+
+	&__list {
+		@include respond(tablet) {
+			margin: 0 auto;
+		}
+	}
+
 	&__menu {
 		display: flex;
 		position: fixed;
@@ -69,54 +122,92 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-
 		transform: translateX(100%);
+		transition: transform 0.3s ease-in-out;
+		border-left: 4px solid $purple;
 		background-color: $black;
+		padding-right: 2em;
 		padding-left: 2em;
-		width: 100%;
+		width: 70%;
 		height: 100%;
+
+		@include respond(tablet) {
+			position: inherit;
+			flex-direction: row;
+			transform: translateX(0);
+			border-left: inherit;
+			padding: 0;
+			width: inherit;
+		}
 
 		&-item {
 			display: block;
 			margin-bottom: 0.5em;
+			border-bottom: 1px solid $purple-light;
 			padding: 0.3em;
+			padding-bottom: 0.8em;
 			width: 100%;
 
-			&:hover {
-				a:after {
-					width: 100%;
-				}
+			@include respond(tablet) {
+				margin: 0;
+				border: 0;
+				padding: 0;
+				width: inherit;
 			}
 		}
 
 		&-item a {
 			// display: block;
 			position: relative;
+			z-index: 10;
 			transition: color 0.1s ease-in-out;
+			padding-inline: 0.1em;
 			width: 100%;
 			color: $white;
-			font-size: 3rem;
+			font-size: 3.3rem;
 			text-align: left;
 			text-transform: uppercase;
+
+			@include respond(tablet) {
+				margin-inline: 0.5em;
+
+				font-size: 2.5rem;
+			}
 
 			&:after {
 				position: absolute;
 				bottom: -3px;
 				left: 0;
-				transition: width 0.2s ease-in-out;
-				background-color: $green;
+				z-index: -5;
+				transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+				background-color: $purple;
 				width: 0%;
-				height: 3px;
+				height: 100%;
 				content: '';
+
+				@include respond(tablet) {
+					bottom: -5px;
+					background-color: $white;
+					width: 0%;
+					height: 2px;
+				}
 			}
 
 			&:hover {
-				color: $green;
+				color: $white;
 
 				&:after {
 					width: 100%;
+
+					@include respond(tablet) {
+						width: 100%;
+					}
 				}
 			}
 		}
+	}
+
+	&__menu.active {
+		transform: translateX(0);
 	}
 }

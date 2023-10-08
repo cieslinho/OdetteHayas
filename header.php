@@ -15,6 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Dancing+Script&family=Montserrat&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <?php wp_head(); ?>
 
@@ -22,14 +24,17 @@
 
     <nav class="nav">
         <div class="nav__navbar">
-            <a href="/" class="nav__logo">Odette Hayas DJ</a>
+            <a href="/" class="nav__logo">
+<img class="nav__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Odette Hayas DJ">
+
+            </a>
             <button class="nav__btn">
                 <div class="nav__btn-box">
                     <div class="nav__btn-bars"></div>
                 </div>
             </button>
         </div>
-    <div class="list">
+    <div class="nav__list">
     <?php wp_nav_menu(
                             array(
                                 'theme_location' => 'odette_main_menu',
@@ -40,5 +45,6 @@
                             )
                         );
                     ?>
+                 
     </div>
     </nav>
