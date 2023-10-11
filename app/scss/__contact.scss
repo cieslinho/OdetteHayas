@@ -1,0 +1,8 @@
+.contact {
+	@include section-padding;
+
+	h2,
+	h3 {
+		text-align: left;
+	}
+}

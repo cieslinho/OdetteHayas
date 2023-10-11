@@ -55,10 +55,10 @@
                 </div>
                 <div class="events__calendar">
                     <div class="events__btns">
-                        <button class="events__btns-btn events__btns-past active">past</button>
-                        <button class="events__btns-btn events__btns-upcoming">upcoming</button>
+                        <button class="events__btns-btn events__btns-past active past">past</button>
+                        <button class="events__btns-btn events__btns-upcoming upcoming">upcoming</button>
                     </div>
-                    <div class="events__calendar-box">
+                    <div id="past" class="events__calendar-box ">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/poster-1.jpg" alt=""
                             class="events__calendar-img">
                         <div class="events__calendar-texts">
@@ -68,7 +68,17 @@
                             </p>
                         </div>
                     </div>
-                    <div class="events__calendar-box">
+                    <div id="past" class="events__calendar-box ">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/poster-2.jpg" alt=""
+                            class="events__calendar-img">
+                        <div class="events__calendar-texts">
+                            <p class="events__calendar-title">Luminosity After Party</p>
+                            <p class="events__calendar-date">
+                                June 26<sup>th</sup> 2022
+                            </p>
+                        </div>
+                    </div>
+                    <div id="upcoming" class="events__calendar-box ">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/poster-2.jpg" alt=""
                             class="events__calendar-img">
                         <div class="events__calendar-texts">

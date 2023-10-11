@@ -179,7 +179,7 @@
 		gap: 2em;
 
 		&-box {
-			display: flex;
+			display: none;
 			position: relative;
 			box-shadow: 0 0 15px #000;
 			border-radius: 8px;
@@ -203,6 +203,14 @@
 					background-color: rgba($color: $black, $alpha: 0.6);
 				}
 			}
+		}
+
+		&-box.past-event {
+			display: flex;
+		}
+
+		&-box.upcoming-event {
+			display: flex;
 		}
 
 		&-img {

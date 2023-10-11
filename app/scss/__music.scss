@@ -1,0 +1,46 @@
+.music {
+	@include section-padding;
+
+	h2,
+	h3 {
+		text-align: left;
+	}
+
+	h2 {
+		color: $white;
+
+		&::after {
+			background-color: $white;
+		}
+	}
+
+	&__soundcloud {
+		iframe {
+			border-radius: 12px;
+		}
+	}
+
+	&__spotify {
+		iframe {
+			height: 100% !important;
+		}
+	}
+
+	&__youtube {
+		iframe {
+			height: 100%;
+		}
+	}
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+
+		@include respond(tablet) {
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
