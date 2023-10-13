@@ -5,7 +5,7 @@
        <div class="header__boxes">
           <div class="header__texts">
             <h1 class="header__texts-title">
-              DJ Odette Hayas
+              Odette Hayas
             </h1>
             <h2 class="header__texts-description">Considered as the first professional Progressive House female Dj in the Middle East, and she is also a producer currently based in Amsterdam.</h2>
             <a href="#about" class="header__texts-btn">read more</a>
@@ -17,7 +17,7 @@
        <div class="header__boxes">
           <div class="header__texts header__texts-center">
           <h1 class="header__texts-title">
-              DJ Odette Hayas
+              Odette Hayas
             </h1>
             <h2 class="header__texts-description">With her amazing talent and great passion for music, she became an iconic Dj, featuring in various events from local to international gigs and publications in Saudi Arabia, Bahrain and the rest of the GCC.</h2>
             <a href="#about" class="header__texts-btn">read more</a>
@@ -29,7 +29,7 @@
        <div class="header__boxes">
        <div class="header__texts header__texts-right">
        <h1 class="header__texts-title">
-              DJ Odette Hayas
+              Odette Hayas
             </h1>
         <h2 class="header__texts-description"> Influenced by several artists such as Stan Kolev, Above & Beyond, Aly & Fila, Armin Van Buuren, Tiesto, Paul Van Dyk, and Cosmic Gate.</h2>
         <a href="#about" class="header__texts-btn">read more</a>

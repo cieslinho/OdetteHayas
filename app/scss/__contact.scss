@@ -5,4 +5,113 @@
 	h3 {
 		text-align: left;
 	}
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		@include respond(tablet) {
+			// flex-direction: row;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		width: 100%;
+
+		&-texts {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5em;
+		}
+
+		&-text {
+			color: $black;
+			font-size: 1.6rem;
+			line-height: 150%;
+
+			@include respond(tablet) {
+				font-size: 1.8rem;
+			}
+		}
+
+		@include respond(tablet) {
+			// width: 50%;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		&-input,
+		&-textarea {
+			transition: background-color 0.2s;
+			outline: none;
+			border: 2px solid transparent;
+			border-radius: 5px;
+			background-color: $black;
+			padding: 0.6em 1.2em;
+			color: $white;
+			font-family: 'Barlow Condensed', sans-serif;
+
+			@include respond(tablet) {
+				font-size: 1.8rem;
+			}
+
+			&::placeholder {
+				color: $white;
+			}
+
+			&:focus {
+				background-color: $purple;
+			}
+		}
+
+		&-btn {
+			transition: background-color 0.2s, color 0.2s, border 0.2s;
+			cursor: pointer;
+			border: 2px solid transparent;
+			border-radius: 5px;
+			background-color: $purple;
+			padding: 1em;
+			color: $white;
+			font-weight: 700;
+			font-size: 1.6rem;
+			text-transform: uppercase;
+
+			&:hover {
+				border: 2px solid $purple;
+				background-color: $white;
+				color: $purple;
+			}
+		}
+
+		@include respond(tablet) {
+			// width: 50%;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		align-self: center;
+		gap: 0.5em;
+
+		&-social {
+			transition: color 0.2s;
+			margin-inline: 0.1em;
+			padding: 0.2em;
+			color: $black;
+			font-size: 3rem;
+			// text-align: center;
+
+			&:hover {
+				color: $purple;
+			}
+		}
+	}
 }

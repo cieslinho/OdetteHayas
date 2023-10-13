@@ -862,3 +862,120 @@ body {
 .contact h3 {
   text-align: left;
 }
+.contact__boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+.contact__info-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.contact__info-text {
+  color: #191a19;
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+@media only screen and (min-width: 768px) {
+  .contact__info-text {
+    font-size: 1.8rem;
+  }
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.contact__form-input, .contact__form-textarea {
+  transition: background-color 0.2s;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: #191a19;
+  padding: 0.6em 1.2em;
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+}
+@media only screen and (min-width: 768px) {
+  .contact__form-input, .contact__form-textarea {
+    font-size: 1.8rem;
+  }
+}
+.contact__form-input::placeholder, .contact__form-textarea::placeholder {
+  color: #fff;
+}
+.contact__form-input:focus, .contact__form-textarea:focus {
+  background-color: #5d12d2;
+}
+.contact__form-btn {
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: #5d12d2;
+  padding: 1em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.contact__form-btn:hover {
+  border: 2px solid #5d12d2;
+  background-color: #fff;
+  color: #5d12d2;
+}
+.contact__socials {
+  display: flex;
+  align-self: center;
+  gap: 0.5em;
+}
+.contact__socials-social {
+  transition: color 0.2s;
+  margin-inline: 0.1em;
+  padding: 0.2em;
+  color: #191a19;
+  font-size: 3rem;
+}
+.contact__socials-social:hover {
+  color: #5d12d2;
+}
+
+.footer {
+  padding: 1em;
+}
+.footer__text {
+  color: #fff;
+  text-align: center;
+}
+.footer__link {
+  position: relative;
+  z-index: 5;
+  transition: color 0.2s;
+  padding: 2px;
+  color: #fff;
+}
+.footer__link:hover {
+  color: #fff;
+}
+.footer__link:hover::after {
+  background-color: #5d12d2;
+  height: 100%;
+}
+.footer__link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  transition: height 0.2s, background-color 0.2s;
+  background-color: #fff;
+  width: 100%;
+  height: 1px;
+  content: "";
+}
