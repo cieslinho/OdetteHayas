@@ -287,12 +287,6 @@ body {
   width: 100%;
   height: 100%;
 }
-.header__slide {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
 .header__boxes {
   display: flex;
   position: relative;
@@ -315,11 +309,12 @@ body {
   display: flex;
   position: absolute;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.3em;
   z-index: 20;
   padding: 0 1em;
   color: #fff;
+  text-align: center;
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
@@ -385,6 +380,12 @@ body {
 .header__texts-btn:hover {
   background-color: #5d12d2;
   color: #fff;
+}
+.header__slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .header__next, .header__prev {
   display: none;

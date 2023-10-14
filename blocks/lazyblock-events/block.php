@@ -11,36 +11,14 @@
                     </h2>
                 </div>
                 <div class="events__feed">
-                    <a href="https://www.instagram.com/p/BwQRa8VBjsc/" class="events__feed-box">
+                <?php foreach( $attributes['instagram-box'] as $instagram ): ?>
+                    <a href="<?php echo $instagram['link']; ?>" class="events__feed-box">
                         <i class='bx bxl-instagram'></i>
                         <img class="events__feed-img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/ig-1.jpg" alt="">
+                            src="<?php echo esc_url( $instagram['image']['url'] ); ?>" alt="<?php echo esc_attr( $instagram['image']['alt'] ); ?>">
                     </a>
-                    <a href="https://www.instagram.com/p/BwQRa8VBjsc/" class="events__feed-box">
-                        <i class='bx bxl-instagram'></i>
-                        <img class="events__feed-img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/ig-2.jpg" alt="">
-                    </a>
-                    <a href="https://www.instagram.com/p/BwQRa8VBjsc/" class="events__feed-box">
-                        <i class='bx bxl-instagram'></i>
-                        <img class="events__feed-img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/ig-3.jpg" alt="">
-                    </a>
-                    <a href="https://www.instagram.com/p/BwQRa8VBjsc/" class="events__feed-box">
-                        <i class='bx bxl-instagram'></i>
-                        <img class="events__feed-img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/ig-4.jpg" alt="">
-                    </a>
-                    <a href="https://www.instagram.com/p/BwQRa8VBjsc/" class="events__feed-box">
-                        <i class='bx bxl-instagram'></i>
-                        <img class="events__feed-img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/ig-5.jpg" alt="">
-                    </a>
-                    <a href="https://www.instagram.com/p/BwQRa8VBjsc/" class="events__feed-box">
-                        <i class='bx bxl-instagram'></i>
-                        <img class="events__feed-img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/ig-7.jfif" alt="">
-                    </a>
+                   
+                    <?php endforeach; ?>
                 </div>
 
             </div>
