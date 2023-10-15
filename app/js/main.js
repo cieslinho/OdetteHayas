@@ -15,18 +15,18 @@ upcomingBtn.addEventListener('click', () => {
 	upcomingBtn.classList.add('active')
 	upcomingBtn.previousElementSibling.classList.remove('active')
 	checkEvents()
+	checkUpcomingEvents()
 })
 
 pastBtn.addEventListener('click', () => {
 	pastBtn.classList.add('active')
 	pastBtn.nextElementSibling.classList.remove('active')
 	checkEvents()
+	eventsError.textContent = ''
 })
 
 function checkEvents() {
 	allEvents.forEach(event => {
-		console.log(event.id)
-
 		if (pastBtn.classList.contains('active') && event.id === 'past') {
 			event.classList.add('past-event')
 		} else {
@@ -41,6 +41,20 @@ function checkEvents() {
 }
 
 checkEvents()
+
+const upcomingEvents = document.getElementsByClassName('upcoming-event')
+const eventsError = document.querySelector('.events__calendar-error')
+function checkUpcomingEvents() {
+	index = 0
+	if (upcomingEvents.length > index) {
+		eventsError.textContent = ''
+	} else {
+		eventsError.textContent = 'There is no upcoming event'
+	}
+	// console.log(upcomingEvents)
+}
+
+// checkUpcomingEvents()
 
 // checkEvents()
 

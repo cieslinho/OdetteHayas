@@ -732,6 +732,14 @@ body {
   padding: 0.1em 0.2em;
   font-size: 1.8rem;
 }
+.events__calendar-error {
+  display: none;
+  color: #fff;
+  text-align: center;
+}
+.events__calendar-error.active {
+  display: block;
+}
 
 .gallery {
   padding: 2em 1em;
@@ -883,6 +891,7 @@ body {
   color: #191a19;
   font-size: 1.6rem;
   line-height: 150%;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .contact__info-text {

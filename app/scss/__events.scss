@@ -247,5 +247,15 @@
 			padding: 0.1em 0.2em;
 			font-size: 1.8rem;
 		}
+
+		&-error {
+			display: none;
+			color: $white;
+			text-align: center;
+		}
+
+		&-error.active {
+			display: block;
+		}
 	}
 }

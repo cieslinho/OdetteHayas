@@ -36,38 +36,23 @@
                         <button class="events__btns-btn events__btns-past active past">past</button>
                         <button class="events__btns-btn events__btns-upcoming upcoming">upcoming</button>
                     </div>
-                    <div id="past" class="events__calendar-box ">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/poster-1.jpg" alt=""
-                            class="events__calendar-img">
+                    <?php foreach( $attributes['event-box'] as $event ): ?>
+                    <div id="<?php echo $event['id']; ?>" class="events__calendar-box">
+                        <img src="<?php echo esc_url( $event['image']['url'] ); ?>" alt="<?php echo esc_attr( $event['image']['alt'] ); ?>" class="events__calendar-img">
                         <div class="events__calendar-texts">
-                            <p class="events__calendar-title">Grandprix weekend - Bahrein</p>
+                            <p class="events__calendar-title"><?php echo $event['title']; ?></p>
                             <p class="events__calendar-date">
-                                April 5<sup>th</sup> 2016
+                            <?php echo $event['date']; ?>
                             </p>
                         </div>
                     </div>
-                    <div id="past" class="events__calendar-box ">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/poster-2.jpg" alt=""
-                            class="events__calendar-img">
-                        <div class="events__calendar-texts">
-                            <p class="events__calendar-title">Luminosity After Party</p>
-                            <p class="events__calendar-date">
-                                June 26<sup>th</sup> 2022
-                            </p>
-                        </div>
-                    </div>
-                    <div id="upcoming" class="events__calendar-box ">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/poster-2.jpg" alt=""
-                            class="events__calendar-img">
-                        <div class="events__calendar-texts">
-                            <p class="events__calendar-title">Luminosity After Party</p>
-                            <p class="events__calendar-date">
-                                June 26<sup>th</sup> 2022
-                            </p>
-                        </div>
-                    </div>
+                    
+                    
 
-
+                    <?php endforeach; ?>
+                    <p class="events__calendar-error active">
+                        
+                    </p>
                 </div>
             </div>
         </div>

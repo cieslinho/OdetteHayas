@@ -6,8 +6,7 @@
             <div class="contact__info">
                 <div class="contact__info-texts">
                 <p class="contact__info-text">If you want to book Odette or get more information about the latest gigs or music please fill in this form and she will get back to you as soon as possible.</p>
-                <p class="contact__info-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio blanditiis est totam. Autem architecto molestias ipsam sed exercitationem! Tempore aperiam officiis porro dolorem suscipit tenetur dicta omnis fuga. Fugit ex porro illum suscipit beatae sequi, ut quod odit architecto ipsum vel ad magnam nisi accusamus molestias asperiores blanditiis repudiandae harum.</p>
-                </div>
+                
                 
           
            
