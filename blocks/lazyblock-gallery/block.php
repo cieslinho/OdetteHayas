@@ -11,31 +11,12 @@
 
         <div class="swiper gallery__swiper">
             <div class="swiper-wrapper gallery__boxes">
+            <?php foreach( $attributes['gallery'] as $gallery ): ?>
                 <div class="gallery__box swiper-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-1.jpg" alt=""
+                    <img src="<?php echo esc_url( $gallery['gallery-image']['url'] ); ?>" alt="<?php echo esc_attr( $gallery['gallery-image']['alt'] ); ?>"
                         class="gallery__img ">
                 </div>
-                <div class="gallery__box swiper-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-2.jpg" alt=""
-                        class="gallery__img ">
-                </div>
-                <div class="gallery__box swiper-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-3.jpg" alt=""
-                        class="gallery__img ">
-                </div>
-                <div class="gallery__box swiper-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-1.jpg" alt=""
-                        class="gallery__img ">
-                </div>
-                <div class="gallery__box swiper-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-2.jpg" alt=""
-                        class="gallery__img ">
-                </div>
-                <div class="gallery__box swiper-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-3.jpg" alt=""
-                        class="gallery__img ">
-                </div>
-
+                <?php endforeach; ?>
 
                 
             </div>
