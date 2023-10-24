@@ -842,9 +842,12 @@ body {
 }
 .music__spotify iframe {
   height: 100% !important;
+  min-height: 453px;
 }
 .music__youtube iframe {
+  border-radius: 12px;
   height: 100%;
+  min-height: 453px;
 }
 .music__boxes {
   display: flex;
@@ -955,6 +958,31 @@ body {
 }
 .contact__socials-social:hover {
   color: #5d12d2;
+}
+.contact__mail {
+  position: relative;
+  z-index: 20;
+  transition: color 0.2s;
+  padding: 1px 2px;
+  color: #191a19;
+  font-weight: 400;
+}
+.contact__mail::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -5;
+  transition: 0.2s;
+  background-color: #5d12d2;
+  width: 100%;
+  height: 1px;
+  content: "";
+}
+.contact__mail:hover {
+  color: #fff;
+}
+.contact__mail:hover::after {
+  height: 100%;
 }
 
 .footer {

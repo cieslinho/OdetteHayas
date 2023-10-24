@@ -23,12 +23,15 @@
 	&__spotify {
 		iframe {
 			height: 100% !important;
+			min-height: 453px;
 		}
 	}
 
 	&__youtube {
 		iframe {
+			border-radius: 12px;
 			height: 100%;
+			min-height: 453px;
 		}
 	}
 
